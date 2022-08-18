@@ -1,0 +1,6 @@
+/* @tailwind base; */
+
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity))
+}

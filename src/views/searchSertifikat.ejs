@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sertifikat Diklat</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sertifikat Diklat</h1>
+    </header>
+    <main>
+      <form>
+        <label>Cari No Sertifikat</label>
+        <input type="text" id="no_sertifikat" />
+        <button type="submit">Cari</button>
+      </form>
+    </main>
+    <script>
+      const search = document.querySelector('form')
+      const no_sertifikat = document.querySelector('#no_sertifikat')
+      search.addEventListener('submit', e => {
+        e.preventDefault()
+        location.replace(`/sertifikat/${no_sertifikat.value}`)
+      })
+    </script>
+  </body>
+</html>
