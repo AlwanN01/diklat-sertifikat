@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Sertifikat Diklat</title>
-  </head>
-  <body>
-    <header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" type="text/css" href="/search.css">
+  <link rel="stylesheet" type="text/css" href="/home.css">
+  <title>Sertifikat Diklat</title>
+</head>
+
+<body>
+  <nav class="border shadow-lg">
+    <div class="wrapper">
+      <div class="logo">
+        <img src="logo.png" alt="logo"> Diklat RSKG
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="text-green-900"><a href="/">Home</a></li>
+          <li class="text-green-900"><a href="/sertifikat">Sertifikat</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="wrapper">
+      <section id="home">
+
+      </section>
+    </div>
+    <!-- search -->
+    <div class="popup-1 font-sans">
       <h1>Sertifikat Diklat</h1>
-    </header>
-    <main>
-      <form>
-        <label>Cari No Sertifikat</label>
-        <input type="text" id="no_sertifikat" />
-        <button type="submit">Cari</button>
-      </form>
-    </main>
-    <script>
-      const search = document.querySelector('form')
-      const no_sertifikat = document.querySelector('#no_sertifikat')
-      search.addEventListener('submit', e => {
-        e.preventDefault()
-        location.replace(`/sertifikat/${no_sertifikat.value}`)
-      })
-    </script>
-  </body>
+      <main>
+        <form>
+          <input
+            class="py-2 px-8 mr-1 text-center bg-white border shadow-sm border-slate-300 placeholder-slate-400 transition ease-in-out delay-100 hover:translate-y-1 hover:scale-110 duration-300 focus:outline-none focus:border-green-900 focus:ring-green-900 rounded-md sm:text-sm focus:ring-1"
+            type="text" id="no_sertifikat" placeholder="Masukan Nomor Sertifikat" />
+          <button id="find-popup-btn"
+            class="py-2 px-4 transition md:ease-in-out delay-100 hover:translate-y-1 hover:scale-110 duration-300"
+            type="submit">Cari</button>
+        </form>
+      </main>
+      <script>
+        const search = document.querySelector('form')
+        const no_sertifikat = document.querySelector('#no_sertifikat')
+        search.addEventListener('submit', e => {
+          e.preventDefault()
+          location.replace(`/sertifikat/${no_sertifikat.value}`)
+        })
+      </script>
+    </div>
+  </div>
+</body>
+
 </html>

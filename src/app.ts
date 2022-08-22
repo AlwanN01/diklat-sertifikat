@@ -5,6 +5,7 @@ import router from 'router/sertifikat'
 import path from 'path'
 import compression from 'compression'
 import helmet from 'helmet'
+import 'express-async-errors'
 import 'model/_sync'
 const app = express()
 

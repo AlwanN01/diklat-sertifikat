@@ -13,7 +13,7 @@ import colors from 'colors'
     await db.authenticate()
     console.log('Connection has been established successfully.')
     //sync table
-    // await (await import('model/sync/sertifikatSY')).default()
+    await (await import('model/sync/sertifikatSY')).default()
   } catch (err) {
     if (err instanceof ValidationError) console.log(colors.red(err.errors[0].message))
     else console.error('Unable to connect to the database:', err.message)
